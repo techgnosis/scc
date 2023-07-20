@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct Simple_Calorie_CounterApp: App {
+    
+    let days: Array<Day> = Array()
+    let foodCatalog: Array<Food> = Array()
+    
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView(days: days, foodCatalog: foodCatalog)
         }
     }
 }

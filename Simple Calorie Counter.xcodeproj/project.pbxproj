@@ -19,7 +19,7 @@
 		A6DFD34A2A67B63E003A2F10 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD3492A67B63E003A2F10 /* Day.swift */; };
 		A6DFD34C2A686502003A2F10 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD34B2A686502003A2F10 /* Activity.swift */; };
 		A6DFD3502A6892AA003A2F10 /* DayRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD34F2A6892AA003A2F10 /* DayRow.swift */; };
-		A6DFD3522A698BE4003A2F10 /* ListFoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD3512A698BE4003A2F10 /* ListFoods.swift */; };
+		A6DFD3522A698BE4003A2F10 /* ListFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD3512A698BE4003A2F10 /* ListFood.swift */; };
 		A6DFD3542A698C7A003A2F10 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD3532A698C7A003A2F10 /* MainView.swift */; };
 		A6DFD3582A699010003A2F10 /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD3572A699010003A2F10 /* FoodRow.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,7 @@
 		A6DFD3492A67B63E003A2F10 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		A6DFD34B2A686502003A2F10 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		A6DFD34F2A6892AA003A2F10 /* DayRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRow.swift; sourceTree = "<group>"; };
-		A6DFD3512A698BE4003A2F10 /* ListFoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoods.swift; sourceTree = "<group>"; };
+		A6DFD3512A698BE4003A2F10 /* ListFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFood.swift; sourceTree = "<group>"; };
 		A6DFD3532A698C7A003A2F10 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A6DFD3572A699010003A2F10 /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,8 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				A6DFD3312A67B223003A2F10 /* Simple_Calorie_CounterApp.swift */,
-				A6DFD3572A699010003A2F10 /* FoodRow.swift */,
 				A6DFD3532A698C7A003A2F10 /* MainView.swift */,
+				A6DFD3572A699010003A2F10 /* FoodRow.swift */,
 				A6DFD3332A67B223003A2F10 /* ListDays.swift */,
 				A6DFD33F2A67B254003A2F10 /* AddFood.swift */,
 				A6DFD3432A67B27F003A2F10 /* DayDetails.swift */,
@@ -83,7 +83,7 @@
 				A6DFD3472A67B5BC003A2F10 /* Food.swift */,
 				A6DFD34F2A6892AA003A2F10 /* DayRow.swift */,
 				A6DFD3492A67B63E003A2F10 /* Day.swift */,
-				A6DFD3512A698BE4003A2F10 /* ListFoods.swift */,
+				A6DFD3512A698BE4003A2F10 /* ListFood.swift */,
 				A6DFD34B2A686502003A2F10 /* Activity.swift */,
 				A6DFD3352A67B224003A2F10 /* Assets.xcassets */,
 				A6DFD3372A67B224003A2F10 /* Preview Content */,
@@ -173,7 +173,7 @@
 			files = (
 				A6DFD3582A699010003A2F10 /* FoodRow.swift in Sources */,
 				A6DFD34A2A67B63E003A2F10 /* Day.swift in Sources */,
-				A6DFD3522A698BE4003A2F10 /* ListFoods.swift in Sources */,
+				A6DFD3522A698BE4003A2F10 /* ListFood.swift in Sources */,
 				A6DFD3442A67B27F003A2F10 /* DayDetails.swift in Sources */,
 				A6DFD3342A67B223003A2F10 /* ListDays.swift in Sources */,
 				A6DFD3402A67B254003A2F10 /* AddFood.swift in Sources */,

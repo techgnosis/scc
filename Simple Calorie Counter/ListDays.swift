@@ -8,11 +8,8 @@ import SwiftUI
 
 
 struct ListDays: View {
-    let days = [
-        Day(name: "Sunday"),
-        Day(name: "Monday"),
-        Day(name: "Tuesday")
-    ]
+    let days: Array<Day>
+    
     
     
     var body: some View {
@@ -29,8 +26,12 @@ struct ListDays: View {
 }
 
 struct ListDays_Previews: PreviewProvider {
-    
+    static let days = [
+        Day(name: "Sunday"),
+        Day(name: "Monday"),
+        Day(name: "Tuesday")
+    ]
     static var previews: some View {
-        ListDays()
+        ListDays(days: days)
     }
 }
