@@ -8,17 +8,15 @@
 import SwiftUI
 
 struct ListFood: View {
-    let foodCatalog: Array<Food>
-    
-    
+    @EnvironmentObject var model: Model
     
     var body: some View {
         NavigationStack {
-            List(foodCatalog) { food in
+            List(model.foodCatalog) { food in
                 FoodRow(food: food)
             }
             NavigationLink("Add Food") {
-                AddFood()
+                AddFood().environmentObject(model)
             }
         }
         
@@ -31,7 +29,9 @@ struct ListFoods_Previews: PreviewProvider {
         Food(name: "chicken", calories: 540, protein: 60),
         Food(name: "baked beans", calories: 300, protein: 13)
     ]
+    
+    static let model: Model = Model(days: Array(), foodCatalog: foodCatalog)
     static var previews: some View {
-        ListFood(foodCatalog: foodCatalog)
+        ListFood().environmentObject(model)
     }
 }

@@ -8,13 +8,13 @@ import SwiftUI
 
 
 struct ListDays: View {
-    let days: Array<Day>
+    @EnvironmentObject var model: Model
     
     
     
     var body: some View {
         NavigationView {
-            List(days) { day in
+            List(model.days) { day in
                 NavigationLink {
                     DayDetail(day: day)
                 } label: {
@@ -31,7 +31,9 @@ struct ListDays_Previews: PreviewProvider {
         Day(name: "Monday"),
         Day(name: "Tuesday")
     ]
+    
+    static let model: Model = Model(days: days, foodCatalog: Array())
     static var previews: some View {
-        ListDays(days: days)
+        ListDays().environmentObject(model)
     }
 }

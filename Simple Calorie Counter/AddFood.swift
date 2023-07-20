@@ -9,6 +9,7 @@ struct AddFood: View {
     @State private var newName: String = ""
     @State private var newCalories: String = ""
     @State private var newProtein: String = ""
+    @EnvironmentObject var model: Model
     
     var body: some View {
         VStack {
@@ -19,18 +20,19 @@ struct AddFood: View {
             Text("Protein")
             TextField("Protein", text: $newProtein).textFieldStyle(.roundedBorder)
             Button("Save") {
-                var _ = Food(
+                model.foodCatalog.append(Food(
                     name: newName,
                     calories: Int(newCalories) ?? 0,
                     protein: Int(newProtein) ?? 0
-                    )
+                    ))
             }
         }
     }
 }
 
 struct AddFood_Previews: PreviewProvider {
+    static let model: Model = Model(days: Array(), foodCatalog: Array())
     static var previews: some View {
-        AddFood()
+        AddFood().environmentObject(model)
     }
 }

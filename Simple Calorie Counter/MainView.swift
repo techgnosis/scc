@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct MainView: View {
-    let days: Array<Day>
-    let foodCatalog: Array<Food>
+    @EnvironmentObject var model: Model
+
     var body: some View {
         TabView {
-            ListDays(days: days)
+            ListDays()
                 .tabItem{
                     Label("Days", systemImage: "square.and.pencil")
-                }
-            ListFood(foodCatalog: foodCatalog)
+                }.environmentObject(model)
+            ListFood()
                 .tabItem {
                     Label("Foods", systemImage: "square.and.pencil")
-                }
+                }.environmentObject(model)
         }
     }
 }
@@ -37,7 +37,9 @@ struct MainView_Previews: PreviewProvider {
         Food(name: "baked beans", calories: 300, protein: 13)
     ]
     
+    static let model: Model = Model(days: days, foodCatalog: foodCatalog)
+    
     static var previews: some View {
-        MainView(days: days, foodCatalog: foodCatalog)
+        MainView().environmentObject(model)
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FoodRow: View {
     var food: Food
+    
     var body: some View {
         Text("\(food.name), \(String(food.calories)), \(String(food.protein))")
     }
