@@ -5,8 +5,27 @@
 import SwiftUI
 
 struct AddFood: View {
+    
+    @State private var newName: String = ""
+    @State private var newCalories: String = ""
+    @State private var newProtein: String = ""
+    
     var body: some View {
-        Text("Add Food")
+        VStack {
+            Text("Name")
+            TextField("Name", text: $newName).textFieldStyle(.roundedBorder)
+            Text("Calories")
+            TextField("Calories", text: $newCalories).textFieldStyle(.roundedBorder)
+            Text("Protein")
+            TextField("Protein", text: $newProtein).textFieldStyle(.roundedBorder)
+            Button("Save") {
+                var _ = Food(
+                    name: newName,
+                    calories: Int(newCalories) ?? 0,
+                    protein: Int(newProtein) ?? 0
+                    )
+            }
+        }
     }
 }
 

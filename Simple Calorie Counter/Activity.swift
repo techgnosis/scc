@@ -9,9 +9,9 @@ import Foundation
 
 class Activity:ObservableObject {
     
-    var calories: Int16;
+    var calories: Int;
     
-    init(calories: Int16) {
+    init(calories: Int) {
         self.calories = calories;
     }
 }

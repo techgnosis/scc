@@ -30,9 +30,9 @@ class Day: Identifiable {
     }
 
     
-    var calories: Int16 {
+    var calories: Int {
         get {
-            var caloriesTemp: Int16 = 0;
+            var caloriesTemp: Int = 0;
             for food in foods {
                 caloriesTemp = caloriesTemp + food.calories
             }
@@ -43,9 +43,9 @@ class Day: Identifiable {
         }
     }
     
-    var protein: Int16 {
+    var protein: Int {
         get {
-            var proteinTemp: Int16 = 0
+            var proteinTemp: Int = 0
             for food in foods {
                 proteinTemp = proteinTemp + food.protein
             }

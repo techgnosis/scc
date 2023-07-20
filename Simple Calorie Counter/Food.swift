@@ -10,10 +10,10 @@ import Foundation
 class Food: Identifiable {
     var id = UUID()
     var name: String;
-    var calories: Int16;
-    var protein: Int16;
+    var calories: Int;
+    var protein: Int;
     
-    init(name: String, calories: Int16, protein: Int16) {
+    init(name: String, calories: Int, protein: Int) {
         self.name = name;
         self.calories = calories;
         self.protein = protein;
