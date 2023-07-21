@@ -28,6 +28,10 @@ class Model: ObservableObject {
     }
     
     func removeDay() {
+        if (days.isEmpty) {
+            return
+        }
+        
         days.removeLast()
         if (self.dayIndex > 0) {
             self.dayIndex = self.dayIndex - 1
