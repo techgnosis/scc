@@ -10,8 +10,8 @@ import Foundation
 class Model: ObservableObject {
     @Published var days: Array<Day>
     @Published var foodCatalog: Array<Food>
-    var dayIndex: Int = 0
-    let dayNames: Array<String> = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday", "Sunday"]
+    private var dayIndex: Int = 0
+    private let dayNames: Array<String> = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday", "Sunday"]
     
     init(days: Array<Day>, foodCatalog: Array<Food>) {
         self.days = days
