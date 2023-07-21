@@ -29,23 +29,13 @@ struct ListDays: View {
             }.listStyle(.plain)
             
             Button("Add Day") {
-                currentDay = model.currentDay
-                if (currentDay == "") {
-                    noDaySet = true
-                } else {
-                    model.addDay(currentDay: currentDay)
-                }
-            }.alert("What day of the week is it? You only have to answer this once", isPresented: $noDaySet) {
-                TextField("", text: $currentDay)
-                Button("OK") {
-                    model.addDay(currentDay: currentDay)
-                }
+                model.addDay()
             }
             Spacer()
             Spacer()
             
             Button("Remove last day") {
-                model.days.removeLast()
+                model.removeDay()
             }
             
         }

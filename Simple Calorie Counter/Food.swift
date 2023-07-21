@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Food: Identifiable {
+class Food: Identifiable, ObservableObject {
     var id = UUID()
     var name: String;
     var calories: Int;

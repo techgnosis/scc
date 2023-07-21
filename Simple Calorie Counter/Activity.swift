@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Activity: Identifiable {
+class Activity: Identifiable, ObservableObject {
     var id = UUID()
     var name: String
     var calories: Int

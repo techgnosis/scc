@@ -7,15 +7,15 @@
 
 import Foundation
 
-class Day: Identifiable {
+class Day: Identifiable, ObservableObject {
     
     let id = UUID()
     
     var name: String
             
-    var foods: Array<Food> = Array()
+    @Published var foods: Array<Food> = Array()
     
-    var activities: Array<Activity> = Array()
+    @Published var activities: Array<Activity> = Array()
     
     func addFood(food: Food) {
         self.foods.append(food)
