@@ -10,6 +10,8 @@ struct AddFood: View {
     @State private var newCalories: String = ""
     @State private var newProtein: String = ""
     @EnvironmentObject var model: Model
+    @Environment(\.presentationMode) var presentationMode
+
     
     var body: some View {
         VStack {
@@ -25,6 +27,7 @@ struct AddFood: View {
                     calories: Int(newCalories) ?? 0,
                     protein: Int(newProtein) ?? 0
                     ))
+                presentationMode.wrappedValue.dismiss()
             }
         }
     }

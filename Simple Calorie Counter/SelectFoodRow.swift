@@ -10,6 +10,8 @@ import SwiftUI
 struct SelectFoodRow: View {
     var day: Day
     var food: Food
+    @Environment(\.presentationMode) var presentationMode
+
     
     var body: some View {
         HStack {
@@ -17,6 +19,7 @@ struct SelectFoodRow: View {
             Button("Add") {
                 self.day.addFood(food: food)
                 print("trying to add \(food.name)")
+                presentationMode.wrappedValue.dismiss()
             }
         }
     }

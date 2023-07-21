@@ -20,6 +20,7 @@ struct SetRMR: View {
             Button("Save") {
                 model.setRMR(rmr: Int(rmr) ?? 2000)
             }
+            Text("Current RMR is \(model.rmr)")
         }
 
     }
