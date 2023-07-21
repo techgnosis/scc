@@ -16,6 +16,7 @@ struct SelectFoodRow: View {
             Text("\(food.name), \(String(food.calories)), \(String(food.protein))")
             Button("Add") {
                 self.day.addFood(food: food)
+                print("trying to add \(food.name)")
             }
         }
     }
