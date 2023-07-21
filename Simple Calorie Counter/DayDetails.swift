@@ -4,7 +4,7 @@
 import SwiftUI
 
 struct DayDetail: View {
-    var day: Day
+    @EnvironmentObject var day: Day
     
     var body: some View {
         NavigationStack {
@@ -27,6 +27,6 @@ struct DayDetail: View {
 struct DayDetail_Previews: PreviewProvider {
     
     static var previews: some View {
-        DayDetail(day: PreviewData.singleDay)
+        DayDetail().environmentObject(PreviewData.singleDay)
     }
 }

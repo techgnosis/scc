@@ -10,21 +10,13 @@ import SwiftUI
 struct ListDays: View {
     @EnvironmentObject var model: Model
     
-    @State var currentDay: String
-    @State var noDaySet: Bool = false
-    
-    init() {
-        self.currentDay = ""
-        self.noDaySet = false
-    }
-    
     var body: some View {
         NavigationStack {
             List(model.days) { day in
                 NavigationLink {
-                    DayDetail(day: day)
+                    DayDetail().environmentObject(day)
                 } label: {
-                    DayRow(day: day)
+                    DayRow().environmentObject(day)
                 }
             }.listStyle(.plain)
             
