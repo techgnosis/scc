@@ -27,10 +27,14 @@ struct PreviewData {
         Food(name: "coleslaw", calories: 25, protein: 0)
     ]
     
+    static let activities = [
+        Activity(name: "walking", calories: 500)
+    ]
+    
     static let days = [
-        Day(name: "Sunday", foods: sundayFood),
-        Day(name: "Monday", foods: mondayFood),
-        Day(name: "Tuesday", foods: tuesdayFood)
+        Day(name: "Sunday", foods: sundayFood, activities: activities),
+        Day(name: "Monday", foods: mondayFood, activities: activities),
+        Day(name: "Tuesday", foods: tuesdayFood, activities: activities)
     ]
     
     static let foodCatalog = [
@@ -41,7 +45,9 @@ struct PreviewData {
     
     static let singleFood: Food = Food(name: "testfood", calories: 1000, protein: 100)
     
-    static let singleDay: Day = Day(name: "testday", foods: mondayFood)
+    static let singleDay: Day = Day(name: "testday", foods: mondayFood, activities: activities)
+    
+    static let singleActivity: Activity = Activity(name: "walk", calories: 500)
     
     static let model: Model = Model(days: days, foodCatalog: foodCatalog)
 }

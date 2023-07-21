@@ -14,6 +14,12 @@ struct DayDetail: View {
             NavigationLink("Select Food") {
                 SelectFood(day: day)
             }
+            List(day.activities) { activity in
+                ActivityRow(activity: activity)
+            }
+            NavigationLink("Add Activity") {
+                AddActivity(day: day)
+            }
         }
     }
 }

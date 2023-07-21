@@ -29,9 +29,10 @@ class Day: Identifiable {
         self.name = name
     }
     
-    init(name: String, foods: Array<Food>) {
+    init(name: String, foods: Array<Food>, activities: Array<Activity>) {
         self.name = name
         self.foods = foods
+        self.activities = activities
     }
 
     

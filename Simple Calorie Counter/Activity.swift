@@ -7,11 +7,13 @@
 
 import Foundation
 
-class Activity:ObservableObject {
+class Activity: Identifiable {
+    var id = UUID()
+    var name: String
+    var calories: Int
     
-    var calories: Int;
-    
-    init(calories: Int) {
-        self.calories = calories;
+    init(name: String, calories: Int) {
+        self.name = name
+        self.calories = calories
     }
 }
