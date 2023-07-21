@@ -13,12 +13,16 @@ struct MainView: View {
     var body: some View {
         TabView {
             ListDays()
-                .tabItem{
+                .tabItem {
                     Label("Days", systemImage: "square.and.pencil")
                 }.environmentObject(model)
             ListFood()
                 .tabItem {
                     Label("Foods", systemImage: "square.and.pencil")
+                }.environmentObject(model)
+            SetRMR()
+                .tabItem {
+                    Label("RMR", systemImage: "square.and.pencil")
                 }.environmentObject(model)
         }
     }

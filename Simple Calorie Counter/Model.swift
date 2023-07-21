@@ -10,6 +10,7 @@ import Foundation
 class Model: ObservableObject {
     @Published var days: Array<Day>
     @Published var foodCatalog: Array<Food>
+    @Published var rmr: Int = 2000
     private var dayIndex: Int = 0
     private let dayNames: Array<String> = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday", "Sunday"]
     
@@ -25,6 +26,10 @@ class Model: ObservableObject {
         if (dayIndex == 7) {
             dayIndex = 0
         }
+    }
+    
+    func setRMR(rmr: Int) {
+        self.rmr = rmr
     }
     
     func removeDay() {

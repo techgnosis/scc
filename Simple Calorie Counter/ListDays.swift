@@ -16,7 +16,7 @@ struct ListDays: View {
                 NavigationLink {
                     DayDetail().environmentObject(day)
                 } label: {
-                    DayRow().environmentObject(day)
+                    DayRow(rmr: model.rmr).environmentObject(day)
                 }
             }.listStyle(.plain)
             
