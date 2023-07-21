@@ -10,7 +10,13 @@ import SwiftUI
 struct ListDays: View {
     @EnvironmentObject var model: Model
     
+    @State var currentDay: String
+    @State var noDaySet: Bool = false
     
+    init() {
+        self.currentDay = ""
+        self.noDaySet = false
+    }
     
     var body: some View {
         NavigationStack {
@@ -21,9 +27,21 @@ struct ListDays: View {
                     DayRow(day: day)
                 }
             }.listStyle(.plain)
+            
             Button("Add Day") {
-                model.addDay()
+                currentDay = model.currentDay
+                if (currentDay == "") {
+                    noDaySet = true
+                } else {
+                    model.addDay(currentDay: currentDay)
+                }
+            }.alert("What day of the week is it?", isPresented: $noDaySet) {
+                TextField("What day of the week is it?", text: $currentDay)
+                Button("OK") {
+                    model.addDay(currentDay: currentDay)
+                }
             }
+            
         }
     }
 }
