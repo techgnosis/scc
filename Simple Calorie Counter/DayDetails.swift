@@ -14,6 +14,11 @@ struct DayDetail: View {
             NavigationLink("Select Food") {
                 SelectFood(day: day)
             }
+            Spacer()
+            Spacer()
+            Button("Delete last food") {
+                day.removeFood()
+            }
             List(day.activities) { activity in
                 ActivityRow(activity: activity)
             }

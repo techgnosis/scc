@@ -10,7 +10,7 @@ import SwiftUI
 struct SelectFoodRow: View {
     var day: Day
     var food: Food
-    @Environment(\.presentationMode) var presentationMode
+    //@Environment(\.presentationMode) var presentationMode
 
     
     var body: some View {
@@ -18,8 +18,7 @@ struct SelectFoodRow: View {
             Text("\(food.name), \(String(food.calories)), \(String(food.protein))")
             Button("Add") {
                 self.day.addFood(food: food)
-                print("trying to add \(food.name)")
-                presentationMode.wrappedValue.dismiss()
+                //presentationMode.wrappedValue.dismiss()
             }
         }
     }
