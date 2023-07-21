@@ -35,5 +35,9 @@ class Model: ObservableObject {
             self.dayIndex = 6
         }
         
+        if (self.days.isEmpty) {
+            self.dayIndex = Date().dayNumberOfWeek()! - 1
+        }
+        
     }
 }
