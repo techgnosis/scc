@@ -10,3 +10,12 @@ Food -
 Name
 Calories per Serving
 Protein per Serving
+
+
+AddFood, write to UserDefaults
+RemoveFood, write to UserDefaults
+
+Same for Days
+Same for dayIndex
+
+
