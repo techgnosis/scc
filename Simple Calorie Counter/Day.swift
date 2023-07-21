@@ -28,6 +28,11 @@ class Day: Identifiable {
     init(name: String) {
         self.name = name
     }
+    
+    init(name: String, foods: Array<Food>) {
+        self.name = name
+        self.foods = foods
+    }
 
     
     var calories: Int {

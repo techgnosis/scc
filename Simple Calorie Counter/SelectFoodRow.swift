@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct SelectFoodRow: View {
-    
+    var day: Day
     var food: Food
     
     var body: some View {
-        Text("\(food.name), \(String(food.calories)), \(String(food.protein))")
+        HStack {
+            Text("\(food.name), \(String(food.calories)), \(String(food.protein))")
+            Button("Add") {
+                self.day.addFood(food: food)
+            }
+        }
     }
 }
 
 struct SelectFoodRow_Previews: PreviewProvider {
     static var previews: some View {
-        SelectFoodRow(food: Food(name: "apple", calories: 100, protein: 1))
+        SelectFoodRow(day: PreviewData.singleDay, food: PreviewData.singleFood)
     }
 }

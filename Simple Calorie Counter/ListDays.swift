@@ -29,14 +29,8 @@ struct ListDays: View {
 }
 
 struct ListDays_Previews: PreviewProvider {
-    static let days = [
-        Day(name: "Sunday"),
-        Day(name: "Monday"),
-        Day(name: "Tuesday")
-    ]
-    
-    static let model: Model = Model(days: days, foodCatalog: Array())
+
     static var previews: some View {
-        ListDays().environmentObject(model)
+        ListDays().environmentObject(PreviewData.model)
     }
 }

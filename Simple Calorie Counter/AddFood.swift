@@ -31,8 +31,8 @@ struct AddFood: View {
 }
 
 struct AddFood_Previews: PreviewProvider {
-    static let model: Model = Model(days: Array(), foodCatalog: Array())
+    
     static var previews: some View {
-        AddFood().environmentObject(model)
+        AddFood().environmentObject(PreviewData.model)
     }
 }

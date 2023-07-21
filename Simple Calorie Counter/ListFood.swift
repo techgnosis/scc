@@ -50,14 +50,8 @@ struct ListFood: View {
 }
 
 struct ListFoods_Previews: PreviewProvider {
-    static let foodCatalog = [
-        Food(name: "cottage cheese", calories: 110, protein: 13),
-        Food(name: "chicken", calories: 540, protein: 60),
-        Food(name: "baked beans", calories: 300, protein: 13)
-    ]
-    
-    static let model: Model = Model(days: Array(), foodCatalog: foodCatalog)
+
     static var previews: some View {
-        ListFood().environmentObject(model)
+        ListFood().environmentObject(PreviewData.model)
     }
 }

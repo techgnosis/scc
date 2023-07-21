@@ -13,6 +13,6 @@ struct DayRow: View {
 
 struct DayRow_Previews: PreviewProvider {
     static var previews: some View {
-        DayRow(day: Day(name: "Monday"))
+        DayRow(day: PreviewData.singleDay)
     }
 }

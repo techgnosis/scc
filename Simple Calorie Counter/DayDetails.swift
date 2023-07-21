@@ -12,14 +12,15 @@ struct DayDetail: View {
                 FoodRow(food: food)
             }
             NavigationLink("Select Food") {
-                SelectFood()
+                SelectFood(day: day)
             }
         }
     }
 }
 
 struct DayDetail_Previews: PreviewProvider {
+    
     static var previews: some View {
-        DayDetail(day: Day(name: "Monday"))
+        DayDetail(day: PreviewData.singleDay)
     }
 }
