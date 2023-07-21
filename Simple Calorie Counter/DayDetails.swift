@@ -7,7 +7,14 @@ struct DayDetail: View {
     var day: Day
     
     var body: some View {
-        Text("day detail")
+        NavigationStack {
+            List(day.foods) { food in
+                FoodRow(food: food)
+            }
+            NavigationLink("Select Food") {
+                SelectFood()
+            }
+        }
     }
 }
 

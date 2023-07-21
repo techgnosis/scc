@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A61F18462A69EEB80033DC30 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61F18452A69EEB80033DC30 /* Model.swift */; };
+		A61F18482A69F94C0033DC30 /* SelectFoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61F18472A69F94B0033DC30 /* SelectFoodRow.swift */; };
 		A6DFD3322A67B223003A2F10 /* Simple_Calorie_CounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD3312A67B223003A2F10 /* Simple_Calorie_CounterApp.swift */; };
 		A6DFD3342A67B223003A2F10 /* ListDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD3332A67B223003A2F10 /* ListDays.swift */; };
 		A6DFD3362A67B224003A2F10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6DFD3352A67B224003A2F10 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		A61F18452A69EEB80033DC30 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A61F18472A69F94B0033DC30 /* SelectFoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFoodRow.swift; sourceTree = "<group>"; };
 		A6DFD32E2A67B223003A2F10 /* Simple Calorie Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Calorie Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6DFD3312A67B223003A2F10 /* Simple_Calorie_CounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Calorie_CounterApp.swift; sourceTree = "<group>"; };
 		A6DFD3332A67B223003A2F10 /* ListDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDays.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				A6DFD3512A698BE4003A2F10 /* ListFood.swift */,
 				A6DFD34B2A686502003A2F10 /* Activity.swift */,
 				A61F18452A69EEB80033DC30 /* Model.swift */,
+				A61F18472A69F94B0033DC30 /* SelectFoodRow.swift */,
 				A6DFD3352A67B224003A2F10 /* Assets.xcassets */,
 				A6DFD3372A67B224003A2F10 /* Preview Content */,
 				A6DFD3452A67B503003A2F10 /* Notes */,
@@ -180,6 +183,7 @@
 				A6DFD3442A67B27F003A2F10 /* DayDetails.swift in Sources */,
 				A6DFD3342A67B223003A2F10 /* ListDays.swift in Sources */,
 				A6DFD3402A67B254003A2F10 /* AddFood.swift in Sources */,
+				A61F18482A69F94C0033DC30 /* SelectFoodRow.swift in Sources */,
 				A61F18462A69EEB80033DC30 /* Model.swift in Sources */,
 				A6DFD3322A67B223003A2F10 /* Simple_Calorie_CounterApp.swift in Sources */,
 				A6DFD3422A67B271003A2F10 /* SelectFood.swift in Sources */,

@@ -13,13 +13,16 @@ struct ListDays: View {
     
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(model.days) { day in
                 NavigationLink {
                     DayDetail(day: day)
                 } label: {
                     DayRow(day: day)
                 }
+            }.listStyle(.plain)
+            Button("Add Day") {
+                model.addDay()
             }
         }
     }
