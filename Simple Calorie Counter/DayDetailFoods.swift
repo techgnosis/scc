@@ -15,7 +15,7 @@ struct DayDetailFoods: View {
         NavigationStack {
             Text("Foods")
             List(day.foods) { food in
-                FoodRow(food: food)
+                DayDetailsFoodRow(food: food)
             }
             NavigationLink("Select Food") {
                 SelectFood(day: day)

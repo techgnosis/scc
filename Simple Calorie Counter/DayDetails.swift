@@ -8,9 +8,13 @@ struct DayDetail: View {
     
     var body: some View {
         TabView {
-            DayDetailFoods().environmentObject(day)
-            DayDetailsActivities().environmentObject(day)
-        }.tabViewStyle(.page)
+            DayDetailFoods().tabItem {
+                Label("Food", systemImage: "square.and.pencil")
+            }.environmentObject(day)
+            DayDetailsActivities().tabItem {
+                Label("Activity", systemImage: "square.and.pencil")
+            }.environmentObject(day)
+        }
     }
 }
 

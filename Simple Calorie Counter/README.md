@@ -3,4 +3,5 @@ A simple calorie counting app that is unburdened by useless features and monetiz
 
 ## TODO
 * Data persistence
-* Fix the DayDetail tab view. The TabView navigation dots are covered by the views
+* The DayDetails is a TabView that is inside another TabView which looks clunky
+* Better alignment of data in the FoodRows. They are just comma-separated now and it looks clunky
