@@ -43,7 +43,10 @@ struct ListFood: View {
             
             NavigationLink("Add Food") {
                 AddFood().environmentObject(model)
-            }
+            }.buttonStyle(.borderedProminent)
+            Spacer()
+            Spacer()
+            Spacer()
         }
         
     }

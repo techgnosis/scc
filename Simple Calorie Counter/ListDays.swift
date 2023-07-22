@@ -11,6 +11,7 @@ struct ListDays: View {
     @EnvironmentObject var model: Model
     
     var body: some View {
+        
         NavigationStack {
             List(model.days) { day in
                 NavigationLink {
@@ -20,17 +21,23 @@ struct ListDays: View {
                 }
             }.listStyle(.plain)
             
+            
             Button("Add Day") {
                 model.addDay()
-            }
+            }.buttonStyle(.borderedProminent)
             Spacer()
             Spacer()
-            
+            Spacer()
+            Spacer()
             Button("Remove last day") {
                 model.removeDay()
-            }
-            
+            }.buttonStyle(.borderedProminent)
+            Spacer()
+            Spacer()
+            Spacer()
         }
+        
+        
     }
 }
 

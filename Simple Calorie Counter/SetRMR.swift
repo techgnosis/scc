@@ -19,7 +19,7 @@ struct SetRMR: View {
             TextField("RMR", text: $rmr).textFieldStyle(.roundedBorder)
             Button("Save") {
                 model.setRMR(rmr: Int(rmr) ?? 2000)
-            }
+            }.buttonStyle(.borderedProminent)
             Text("Current RMR is \(model.rmr)")
         }
 

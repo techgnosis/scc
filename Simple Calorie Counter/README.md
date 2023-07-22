@@ -2,7 +2,7 @@ A simple calorie counting app that is unburdened by useless features and monetiz
 
 
 ## TODO
-* Delete foods from Food Catalog
-    * Make it a Set
-* Better button spacing in general
 * Data persistence
+* Day Detail is a TabView with a View for Foods and a View for Activities
+* Delete Activities
+* Delete specific Foods

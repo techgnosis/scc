@@ -28,7 +28,7 @@ struct AddFood: View {
                     protein: Int(newProtein) ?? 0
                     ))
                 presentationMode.wrappedValue.dismiss()
-            }
+            }.buttonStyle(.borderedProminent)
         }
     }
 }
