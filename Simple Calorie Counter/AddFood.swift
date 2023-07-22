@@ -22,7 +22,7 @@ struct AddFood: View {
             Text("Protein")
             TextField("Protein", text: $newProtein).textFieldStyle(.roundedBorder)
             Button("Save") {
-                model.foodCatalog.append(Food(
+                model.foodCatalog.insert(Food(
                     name: newName,
                     calories: Int(newCalories) ?? 0,
                     protein: Int(newProtein) ?? 0

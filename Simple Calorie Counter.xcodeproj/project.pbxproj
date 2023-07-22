@@ -14,6 +14,7 @@
 		A61F184E2A6A61530033DC30 /* ActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61F184D2A6A61530033DC30 /* ActivityRow.swift */; };
 		A61F18522A6AEB9F0033DC30 /* dayNumberOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61F18512A6AEB9F0033DC30 /* dayNumberOfWeek.swift */; };
 		A61F18542A6AF47E0033DC30 /* SetRMR.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61F18532A6AF47E0033DC30 /* SetRMR.swift */; };
+		A67879982A6C550C0054F121 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A67879972A6C550C0054F121 /* README.md */; };
 		A6DFD3322A67B223003A2F10 /* Simple_Calorie_CounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD3312A67B223003A2F10 /* Simple_Calorie_CounterApp.swift */; };
 		A6DFD3342A67B223003A2F10 /* ListDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD3332A67B223003A2F10 /* ListDays.swift */; };
 		A6DFD3362A67B224003A2F10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6DFD3352A67B224003A2F10 /* Assets.xcassets */; };
@@ -21,7 +22,6 @@
 		A6DFD3402A67B254003A2F10 /* AddFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD33F2A67B254003A2F10 /* AddFood.swift */; };
 		A6DFD3422A67B271003A2F10 /* SelectFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD3412A67B271003A2F10 /* SelectFood.swift */; };
 		A6DFD3442A67B27F003A2F10 /* DayDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD3432A67B27F003A2F10 /* DayDetails.swift */; };
-		A6DFD3462A67B503003A2F10 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = A6DFD3452A67B503003A2F10 /* Notes */; };
 		A6DFD3482A67B5BC003A2F10 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD3472A67B5BC003A2F10 /* Food.swift */; };
 		A6DFD34A2A67B63E003A2F10 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD3492A67B63E003A2F10 /* Day.swift */; };
 		A6DFD34C2A686502003A2F10 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DFD34B2A686502003A2F10 /* Activity.swift */; };
@@ -39,6 +39,7 @@
 		A61F184D2A6A61530033DC30 /* ActivityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRow.swift; sourceTree = "<group>"; };
 		A61F18512A6AEB9F0033DC30 /* dayNumberOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dayNumberOfWeek.swift; sourceTree = "<group>"; };
 		A61F18532A6AF47E0033DC30 /* SetRMR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRMR.swift; sourceTree = "<group>"; };
+		A67879972A6C550C0054F121 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A6DFD32E2A67B223003A2F10 /* Simple Calorie Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Calorie Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6DFD3312A67B223003A2F10 /* Simple_Calorie_CounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Calorie_CounterApp.swift; sourceTree = "<group>"; };
 		A6DFD3332A67B223003A2F10 /* ListDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDays.swift; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		A6DFD33F2A67B254003A2F10 /* AddFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFood.swift; sourceTree = "<group>"; };
 		A6DFD3412A67B271003A2F10 /* SelectFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFood.swift; sourceTree = "<group>"; };
 		A6DFD3432A67B27F003A2F10 /* DayDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetails.swift; sourceTree = "<group>"; };
-		A6DFD3452A67B503003A2F10 /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 		A6DFD3472A67B5BC003A2F10 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		A6DFD3492A67B63E003A2F10 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		A6DFD34B2A686502003A2F10 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
@@ -106,9 +106,9 @@
 				A61F184D2A6A61530033DC30 /* ActivityRow.swift */,
 				A6DFD3352A67B224003A2F10 /* Assets.xcassets */,
 				A6DFD3372A67B224003A2F10 /* Preview Content */,
-				A6DFD3452A67B503003A2F10 /* Notes */,
 				A61F18512A6AEB9F0033DC30 /* dayNumberOfWeek.swift */,
 				A61F18532A6AF47E0033DC30 /* SetRMR.swift */,
+				A67879972A6C550C0054F121 /* README.md */,
 			);
 			path = "Simple Calorie Counter";
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6DFD3462A67B503003A2F10 /* Notes in Resources */,
+				A67879982A6C550C0054F121 /* README.md in Resources */,
 				A6DFD3392A67B224003A2F10 /* Preview Assets.xcassets in Resources */,
 				A6DFD3362A67B224003A2F10 /* Assets.xcassets in Resources */,
 			);

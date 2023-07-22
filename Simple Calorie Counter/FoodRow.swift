@@ -9,12 +9,15 @@ import SwiftUI
 
 struct FoodRow: View {
     var food: Food
+    @EnvironmentObject var model: Model
     
     var body: some View {
-        HStack(spacing: 50) {
-            Text(food.name)
-            Text(String(food.calories))
-            Text(String(food.protein))
+        HStack {
+            Text("\(food.name), \(String(food.calories)), \(String(food.protein))")
+            Spacer()
+            Button("Remove") {
+                self.model.removeFood(food: food)
+            }.buttonStyle(.borderedProminent)
         }
     }
 }

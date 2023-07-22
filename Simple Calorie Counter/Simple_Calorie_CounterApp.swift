@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct Simple_Calorie_CounterApp: App {
 
-    @StateObject var model: Model = Model(days: Array(), foodCatalog: Array())
+    @StateObject var model: Model = Model(days: Array(), foodCatalog: Set())
     
     var body: some Scene {
         WindowGroup {

@@ -38,7 +38,7 @@ struct ListFood: View {
             }.pickerStyle(SegmentedPickerStyle())
             
             List(sortedFood) { food in
-                FoodRow(food: food)
+                FoodRow(food: food).environmentObject(model)
             }
             
             NavigationLink("Add Food") {

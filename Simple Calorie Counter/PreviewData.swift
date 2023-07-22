@@ -37,7 +37,7 @@ struct PreviewData {
         Day(name: "Tuesday", foods: tuesdayFood, activities: activities)
     ]
     
-    static let foodCatalog = [
+    static let foodCatalog: Set = [
         Food(name: "cottage cheese", calories: 110, protein: 13),
         Food(name: "chicken", calories: 540, protein: 60),
         Food(name: "baked beans", calories: 300, protein: 13)

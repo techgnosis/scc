@@ -10,7 +10,7 @@ struct SelectFood: View {
     var day: Day
     
     var body: some View {
-        List(model.foodCatalog) { food in
+        List(Array(model.foodCatalog)) { food in
             SelectFoodRow(day: day, food: food)
         }
     }

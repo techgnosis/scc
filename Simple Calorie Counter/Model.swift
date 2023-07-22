@@ -9,12 +9,12 @@ import Foundation
 
 class Model: ObservableObject {
     @Published var days: Array<Day>
-    @Published var foodCatalog: Array<Food>
+    @Published var foodCatalog: Set<Food>
     @Published var rmr: Int = 2000
     private var dayIndex: Int = 0
     private let dayNames: Array<String> = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday", "Sunday"]
     
-    init(days: Array<Day>, foodCatalog: Array<Food>) {
+    init(days: Array<Day>, foodCatalog: Set<Food>) {
         self.days = days
         self.foodCatalog = foodCatalog
         self.dayIndex = Date().dayNumberOfWeek()! - 1
@@ -30,6 +30,10 @@ class Model: ObservableObject {
     
     func setRMR(rmr: Int) {
         self.rmr = rmr
+    }
+    
+    func removeFood(food: Food) {
+        foodCatalog.remove(food)
     }
     
     func removeDay() {
