@@ -18,7 +18,6 @@ struct SelectFoodRow: View {
             Spacer()
             Button("Add") {
                 self.day.addFood(food: food)
-                //presentationMode.wrappedValue.dismiss()
             }.buttonStyle(.borderedProminent)
         }
     }
