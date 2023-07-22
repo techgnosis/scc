@@ -17,7 +17,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="protein" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
-    <entity name="Model" representedClassName="Model" syncable="YES" codeGenerationType="class">
+    <entity name="ModelA" representedClassName="ModelA" syncable="YES" codeGenerationType="class">
         <attribute name="dayIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="days" optional="YES" attributeType="Binary"/>
         <attribute name="foodCatalog" optional="YES" attributeType="Binary"/>

@@ -10,16 +10,16 @@ import SwiftUI
 struct SelectFoodRow: View {
     var day: Day
     var food: Food
-    //@Environment(\.presentationMode) var presentationMode
 
     
     var body: some View {
         HStack {
             Text("\(food.name), \(String(food.calories)), \(String(food.protein))")
+            Spacer()
             Button("Add") {
                 self.day.addFood(food: food)
                 //presentationMode.wrappedValue.dismiss()
-            }
+            }.buttonStyle(.borderedProminent)
         }
     }
 }
