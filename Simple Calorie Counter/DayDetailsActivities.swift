@@ -20,6 +20,11 @@ struct DayDetailsActivities: View {
             NavigationLink("Add Activity") {
                 AddActivity(day: day)
             }.buttonStyle(.borderedProminent)
+            Spacer()
+            Spacer()
+            Button("Delete last Activity") {
+                day.removeActivity()
+            }.buttonStyle(.borderedProminent)
         }
     }
 }

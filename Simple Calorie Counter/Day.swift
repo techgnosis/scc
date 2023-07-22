@@ -33,6 +33,14 @@ class Day: Identifiable, ObservableObject {
         foods.removeLast()
     }
     
+    func removeActivity() {
+        if (activities.isEmpty) {
+            return
+        }
+        
+        activities.removeLast()
+    }
+    
     init(name: String) {
         self.name = name
     }

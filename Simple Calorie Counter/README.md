@@ -3,6 +3,4 @@ A simple calorie counting app that is unburdened by useless features and monetiz
 
 ## TODO
 * Data persistence
-* Day Detail is a TabView with a View for Foods and a View for Activities
-* Delete Activities
-* Delete specific Foods
+* Fix the DayDetail tab view. The TabView navigation dots are covered by the views

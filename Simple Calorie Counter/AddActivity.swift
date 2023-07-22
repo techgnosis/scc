@@ -11,6 +11,7 @@ struct AddActivity: View {
     @State private var newName: String = ""
     @State private var newCalories: String = ""
     var day: Day
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
@@ -20,6 +21,7 @@ struct AddActivity: View {
             TextField("Calories", text: $newCalories).textFieldStyle(.roundedBorder)
             Button("Save") {
                 day.addActivity(activity: Activity(name: newName, calories: Int(newCalories) ?? 0))
+                presentationMode.wrappedValue.dismiss()
             }
         }
     }
