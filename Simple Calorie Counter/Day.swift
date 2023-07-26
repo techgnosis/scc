@@ -14,15 +14,16 @@ class Day: Identifiable, ObservableObject {
     var name: String
             
     @Published var foods: Array<Food> = Array()
-    
-    @Published var activities: Array<Activity> = Array()
-    
+        
     func addFood(food: Food) {
         self.foods.append(food)
     }
     
-    func addActivity(activity: Activity) {
-        self.activities.append(activity)
+    func addActivity(food: Food) {
+        if (food.calories > 0) {
+            food.calories = food.calories * -1
+        }
+        self.foods.append(food)
     }
     
     func removeFood() {
@@ -33,41 +34,29 @@ class Day: Identifiable, ObservableObject {
         foods.removeLast()
     }
     
-    func removeActivity() {
-        if (activities.isEmpty) {
-            return
-        }
-        
-        activities.removeLast()
-    }
-    
     init(name: String) {
         self.name = name
     }
     
-    init(name: String, foods: Array<Food>, activities: Array<Activity>) {
+    init(name: String, foods: Array<Food>) {
         self.name = name
         self.foods = foods
-        self.activities = activities
     }
 
     
-    var calories: Int {
+    var calories: Int64 {
         get {
-            var caloriesTemp: Int = 0;
+            var caloriesTemp: Int64 = 0;
             for food in foods {
                 caloriesTemp = caloriesTemp + food.calories
-            }
-            for activity in activities {
-                caloriesTemp = caloriesTemp - activity.calories
             }
             return caloriesTemp
         }
     }
     
-    var protein: Int {
+    var protein: Int64 {
         get {
-            var proteinTemp: Int = 0
+            var proteinTemp: Int64 = 0
             for food in foods {
                 proteinTemp = proteinTemp + food.protein
             }

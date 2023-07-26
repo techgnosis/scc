@@ -5,7 +5,7 @@ import SwiftUI
 
 struct DayRow: View {
     @EnvironmentObject var day: Day
-    var rmr: Int
+    var rmr: Int64
     
     var body: some View {
         Text("\(day.name), \(String(day.calories)) cal, \(String(day.protein))g, \(rmr - day.calories) deficit")

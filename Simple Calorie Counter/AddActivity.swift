@@ -20,7 +20,7 @@ struct AddActivity: View {
             Text("Calories")
             TextField("Calories", text: $newCalories).textFieldStyle(.roundedBorder)
             Button("Save") {
-                day.addActivity(activity: Activity(name: newName, calories: Int(newCalories) ?? 0))
+                day.addActivity(food: Food(name: newName, calories: Int64(newCalories) ?? 0, protein: 0))
                 presentationMode.wrappedValue.dismiss()
             }
         }

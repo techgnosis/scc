@@ -1,9 +1,7 @@
-//
-//  DayDetailsFoodRow.swift
-//  Simple Calorie Counter
-//
-//  Created by James Musselwhite on 7/22/23.
-//
+// Different from FoodRow because FoodRow has a delete button since a Food
+// can be deleted from the foodCatalog
+// Dispays the Food differently depending on if its actually food or
+// if its an activity
 
 import SwiftUI
 
@@ -12,7 +10,7 @@ struct DayDetailsFoodRow: View {
     
     var body: some View {
         HStack {
-            Text("\(food.name), \(String(food.calories)), \(String(food.protein))")
+            food.isActivity ? Text("\(food.name), \(String(food.calories))") : Text("\(food.name), \(String(food.calories)), \(String(food.protein))")
         }
     }
 }

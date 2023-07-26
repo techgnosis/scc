@@ -1,7 +1,5 @@
-// Show the last 7 days only
-// Shows Date, Calories, Protein
-// Touching a day will take you to ViewDay
-// Has an "Add Food" button that takes you to AddFood
+// Shows Day, Calories, Protein, Deficit
+// Touching a day will take you to DayDetail
 
 import SwiftUI
 

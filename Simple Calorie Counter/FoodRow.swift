@@ -1,9 +1,5 @@
-//
-//  FoodRow.swift
-//  Simple Calorie Counter
-//
-//  Created by James Musselwhite on 7/20/23.
-//
+// FoodRow is for the food catalog
+// It can be deleted so it has its own delete button
 
 import SwiftUI
 

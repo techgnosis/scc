@@ -24,8 +24,8 @@ struct AddFood: View {
             Button("Save") {
                 model.foodCatalog.insert(Food(
                     name: newName,
-                    calories: Int(newCalories) ?? 0,
-                    protein: Int(newProtein) ?? 0
+                    calories: Int64(newCalories) ?? 0,
+                    protein: Int64(newProtein) ?? 0
                     ))
                 presentationMode.wrappedValue.dismiss()
             }.buttonStyle(.borderedProminent)

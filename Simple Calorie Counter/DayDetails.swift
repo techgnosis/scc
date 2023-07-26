@@ -7,14 +7,24 @@ struct DayDetail: View {
     @EnvironmentObject var day: Day
     
     var body: some View {
-        TabView {
-            DayDetailFoods().tabItem {
-                Label("Food", systemImage: "square.and.pencil")
-            }.environmentObject(day)
-            DayDetailsActivities().tabItem {
-                Label("Activity", systemImage: "square.and.pencil")
-            }.environmentObject(day)
+        NavigationStack {
+            Text("Foods and Activities")
+            List(day.foods) { food in
+                DayDetailsFoodRow(food: food)
+            }
+            NavigationLink("Select Food") {
+                SelectFood(day: day)
+            }.buttonStyle(.borderedProminent)
+            Spacer()
+            Spacer()
+            Button("Delete last entry") {
+                day.removeFood()
+            }.buttonStyle(.borderedProminent)
+            NavigationLink("Add Activity") {
+                AddActivity(day: day)
+            }.buttonStyle(.borderedProminent)
         }
+
     }
 }
 

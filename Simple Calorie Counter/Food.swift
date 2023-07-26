@@ -10,13 +10,17 @@ import Foundation
 class Food: Identifiable, ObservableObject, Hashable, Equatable {
     var id = UUID()
     var name: String;
-    var calories: Int;
-    var protein: Int;
+    var calories: Int64;
+    var protein: Int64;
     
-    init(name: String, calories: Int, protein: Int) {
-        self.name = name;
-        self.calories = calories;
-        self.protein = protein;
+    var isActivity: Bool {
+        return (calories < 0)
+    }
+    
+    init(name: String, calories: Int64, protein: Int64) {
+        self.name = name
+        self.calories = calories
+        self.protein = protein
     }
     
     func hash(into hasher: inout Hasher) {

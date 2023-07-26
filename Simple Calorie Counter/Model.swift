@@ -5,12 +5,19 @@
 //  Created by James Musselwhite on 7/20/23.
 //
 
+// Have a class that handles all sqlite code
+// Instantiate an object of it
+// Pass it to Model in the init
+// On Model init, load all the Foods and Days from the DB
+// When AddFood, DeleteFood, AddActivity, DeleteActivity, AddDay, or DeleteDay are called, check if the DB object exists
+// and use it, otherwise just do nothing and let everything sit in RAM
+
 import Foundation
 
 class Model: ObservableObject {
     @Published var days: Array<Day>
     @Published var foodCatalog: Set<Food>
-    @Published var rmr: Int = 2000
+    @Published var rmr: Int64 = 2000
     private var dayIndex: Int = 0
     private let dayNames: Array<String> = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday", "Sunday"]
     
@@ -28,7 +35,7 @@ class Model: ObservableObject {
         }
     }
     
-    func setRMR(rmr: Int) {
+    func setRMR(rmr: Int64) {
         self.rmr = rmr
     }
     
