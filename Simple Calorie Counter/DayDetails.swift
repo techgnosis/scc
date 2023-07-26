@@ -17,6 +17,11 @@ struct DayDetail: View {
             }.buttonStyle(.borderedProminent)
             Spacer()
             Spacer()
+            NavigationLink("Ad-hoc Food") {
+                AdHocFood().environmentObject(day)
+            }.buttonStyle(.borderedProminent)
+            Spacer()
+            Spacer()
             NavigationLink("Add Activity") {
                 AddActivity(day: day)
             }.buttonStyle(.borderedProminent)
