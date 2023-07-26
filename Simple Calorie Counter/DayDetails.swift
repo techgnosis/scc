@@ -10,19 +10,17 @@ struct DayDetail: View {
         NavigationStack {
             Text("Foods and Activities")
             List(day.foods) { food in
-                DayDetailsFoodRow(food: food)
+                DayDetailsFoodRow(food: food).environmentObject(day)
             }
             NavigationLink("Select Food") {
                 SelectFood(day: day)
             }.buttonStyle(.borderedProminent)
             Spacer()
             Spacer()
-            Button("Delete last entry") {
-                day.removeFood()
-            }.buttonStyle(.borderedProminent)
             NavigationLink("Add Activity") {
                 AddActivity(day: day)
             }.buttonStyle(.borderedProminent)
+            Spacer()
         }
 
     }

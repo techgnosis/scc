@@ -4,8 +4,8 @@ A simple calorie counting app that is unburdened by useless features and monetiz
 ## TODO
 * Data persistence
   * switch to sqlite
-* The DayDetails is a TabView that is inside another TabView which looks clunky
 * Better alignment of data in the FoodRows. They are just comma-separated now and it looks clunky
+* Ad-hoc food addition
 
 
 ## sqlite

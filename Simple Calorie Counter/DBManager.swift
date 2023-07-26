@@ -15,8 +15,6 @@ class DBManager {
     private let foodName = Expression<String?>("name")
     private let foodCalories = Expression<Int64>("calories")
     private let foodProtein = Expression<Int64>("protein")
-    private let foodServing = Expression<Int64>("serving")
-    private let foodDensity = Expression<Int64>("density")
     private let foodDeleted = Expression<Bool>("deleted")
                 
     private let days = Table("days")
@@ -47,8 +45,6 @@ class DBManager {
                 t.column(foodName)
                 t.column(foodCalories)
                 t.column(foodProtein)
-                t.column(foodServing)
-                t.column(foodDensity)
             })
             
             try db.run(days.create { t in
@@ -70,11 +66,10 @@ class DBManager {
     }
     
     func addDay(day: Day) {
-        
         do {
             let db = try Connection("db.sqlite3")
             let insert = days.insert(dayName <- day.name)
-            _ = try db.run(insert)
+            try db.run(insert)
         } catch {
             print(error)
         }
@@ -92,7 +87,7 @@ class DBManager {
                 foodCalories <- food.calories,
                 foodProtein <- food.protein
             )
-             _ = try db.run(insert)
+            try db.run(insert)
         } catch {
             print(error)
         }

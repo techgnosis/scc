@@ -7,10 +7,15 @@ import SwiftUI
 
 struct DayDetailsFoodRow: View {
     var food: Food
+    @EnvironmentObject var day: Day
     
     var body: some View {
         HStack {
             food.isActivity ? Text("\(food.name), \(String(food.calories))") : Text("\(food.name), \(String(food.calories)), \(String(food.protein))")
+            Spacer()
+            Button("Remove") {
+                self.day.removeFood(food: food)
+            }.buttonStyle(.borderedProminent)
         }
     }
 }

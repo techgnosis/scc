@@ -16,7 +16,7 @@ class Day: Identifiable, ObservableObject {
     @Published var foods: Array<Food> = Array()
         
     func addFood(food: Food) {
-        self.foods.append(food)
+        self.foods.append(Food(name: food.name, calories: food.calories, protein: food.protein))
     }
     
     func addActivity(food: Food) {
@@ -26,12 +26,8 @@ class Day: Identifiable, ObservableObject {
         self.foods.append(food)
     }
     
-    func removeFood() {
-        if (foods.isEmpty) {
-            return
-        }
-        
-        foods.removeLast()
+    func removeFood(food: Food) {
+        foods.removeAll(where: { $0 == food} )
     }
     
     init(name: String) {
